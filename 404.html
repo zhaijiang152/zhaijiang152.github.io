@@ -1,24 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
+
 <head>
-  <meta charset="UTF-8">
-  <title>404</title>
-  <meta name="keywords" content="Hexo,404,Design">
-  <meta name="description" content="Tribute Forrest Gump">
-  <link rel="stylesheet" href="/css/404.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>エラー発生。</title>
+  <style>
+    @font-face {
+      font-family: 'JetBrains Mono';
+      src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+      color: #FFF;
+      background-color: #141516;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-image: url(https://ak.hypergryph.com/assets/index/images/ak/pc/bk.jpg);
+    }
+
+    main {
+      text-align: center;
+    }
+
+    #logo {
+      vertical-align: middle;
+      display: inline-block;
+    }
+
+    #logo img {
+      width: 300px;
+    }
+
+    #error {
+      vertical-align: middle;
+      display: inline-block;
+    }
+
+    #error a {
+      color: #2BF;
+      padding: 3px 10px;
+      font-size: larger;
+      text-decoration: none;
+    }
+
+    #error a:hover {
+      color: #000;
+      background-color: #2BF;
+    }
+
+    h1 {
+      font-size: 60px;
+      color: #FE2;
+    }
+
+    h2 {
+      font-size: 32px;
+      font-family: "JetBrains Mono";
+    }
+
+    @media (max-width: 768px) {
+      #logo img {
+        width: auto;
+        height: 380px;
+        opacity: .23;
+        position: fixed;
+        bottom: -30px;
+        left: -38%;
+        pointer-events: none;
+      }      
+    }
+  </style>
 </head>
+
 <body>
-<div class="notfound">
-  <a class="notfound-link" href="/">
-    <img width="30" src="data:image/svg+xml;base64,PHN2ZyB0PSIxNTYyODQyNjI3NDA5IiB2aWV3Qm94PSIwIDAgMTAyNCAxMDI0IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgcC1pZD0iNTIxNDgiIHdpZHRoPSI4MDAiIGhlaWdodD0iODAwIj48cGF0aCBkPSJNMTk0LjYgNDc5LjFoNzQ5LjF2NTcuNkgxODYuNEw1MjggODc4LjMgNDg3LjMgOTE5IDEyMSA1NTIuNyA4MC4zIDUxMmw0MDctNDA3IDQwLjcgNDAuN3oiIGZpbGw9IiIgcC1pZD0iNTIxNDkiLz48L3N2Zz4=">
-  </a>
-  <figure class="forrestgump">
-    <figcaption>
-      <h1 style="color: #6b0b0c;">404<br>Not Found!</h1>
-      <h3 style="color: #14206a;">Life was like a box of chocolates, you never know what you're going to get.</h3>
-    </figcaption>
-    <img src="/images/forrestgump.png">
-  </figure>
-</div>
+  <main>
+    <a id="logo" href="/">
+      <img src="https://ak.hypergryph.com/assets/index/images/ak/pc/faction/1.png" alt="to home" />
+    </a>
+    <div id="error">
+      <h1>エラー発生。</h1>
+      <h2 style="text-align: left;">404 NOT FOUND</h2>
+      <p style="text-align: left;">
+        <a href="/">首页</a>
+        <a onClick="history.back();">上一页</a>
+      </p>
+    </div>
+  </main>
+
 </body>
+
 </html>
