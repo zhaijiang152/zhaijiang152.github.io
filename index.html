@@ -1,361 +1,395 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  
-  
-  <meta name="keywords" content="技术,编程,生活,思考">
-  
-  
-  <meta name="description" content="个人技术博客，分享编程、生活和思考">
-  
-  <title>
-    
-    忧寒的小窝
-  </title>
-  <!-- Icon -->
-  
-    <link rel="shortcut icon" href="/favicon.ico">
-    
-  
-<link rel="stylesheet" href="/css/style.css">
-
-  
-  
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
-
-  
-  
-<script src="/js/pace.min.js"></script>
-
+<html>
+    <head>
+    <!--Theme is ning by ning0818. See https://github.com/ning0818/hexo-theme-ning-->
+    <script src=/app.js></script>
+    <link rel="stylesheet" href="https://jsd.onmicrosoft.cn/gh/ning0818/CDN-Files/ai.css">
+    <link href="https://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+    <style>
+    .ai-summary {
+    background: #f1f3f8;
+    border-radius: 10px;
+    padding: 12px;
+    line-height: 1.3;
+    border: 1px solid #e3e8f7;
+    margin-bottom: 16px;
+    </style>
+    <link rel="shortcut icon" href="https://www.yuanning0818.tk/logo.png" type="image/x-icon">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <link rel="stylesheet" class="nightmode" href="/assets/css/main.css">
+    <link rel="stylesheet" href="https://npm.elemecdn.com/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <script async src="https://npm.elemecdn.com/penndu@1.0.0/bsz.js"></script>
+    <link rel="stylesheet" class="nightmode" href="/css/style.css">
+    <link rel="stylesheet" class="nightmode" href="/css/plugin.css">
+    <script src="/js/pandown.js"></script>
 <meta name="generator" content="Hexo 7.3.0"></head>
+    <body>
+        <div class="container">
+            <body class="no-touch">
+    <div id="app" class="App affix App--index" style="min-height: 744px;" aria-hidden="false">
 
-<body>
-  <main class="content">
-    <section class="jumbotron">
-  <div class="video">
-    
-    <div class="video-frame">
-      <img src="/images/ocean/overlay-hero.png" alt="Decorative image frame">
+        <div id="app-navigation" class="App-navigation">
+            <div class="Navigation ButtonGroup App-backControl"><button class="Button Button--icon Navigation-drawer hasIcon" type="button" aria-label="打开导航抽屉"><i aria-hidden="true" class="icon fas fa-bars Button-icon"></i><span class="Button-label"></span></button></div>
+        </div>
+
+        <div id="drawer" class="App-drawer">
+
+            <header id="header" class="App-header navbar-fixed-top">
+                <div id="header-navigation" class="Header-navigation">
+                    <div class="Navigation ButtonGroup"></div>
+                </div>
+                <div class="container">
+                    <div class="Header-title">
+                        <a href="/" id="home-link">
+                            <!--顶栏logo-->
+                            <img src="https://www.yuanning0818.tk/logo.png" alt="首页" class="Header-logo">
+                            <!--顶栏logo end-->
+                        </a>
+                    </div>
+                    <div id="header-primary" class="Header-primary">
+                        <ul class="Header-controls">
+                            <!--顶栏内容-->
+                            
+                            <li class="item-link4">
+                                <a class="LinksButton Button Button--link active" href="/">
+                                    <!--<i aria-hidden="true" class="icon fas fa-home Button-icon LinksButton-icon"></i>-->
+                                    <span class="LinksButton-title">首页</span>
+                                </a>
+                            </li>
+                            
+                            <li class="item-link4">
+                                <a class="LinksButton Button Button--link active" href="/tags/">
+                                    <!--<i aria-hidden="true" class="icon fas fa-home Button-icon LinksButton-icon"></i>-->
+                                    <span class="LinksButton-title">标签</span>
+                                </a>
+                            </li>
+                            
+                            <!--顶栏内容 end-->
+                        </ul>
+                    </div>
+                    <div id="header-secondary" class="Header-secondary">
+                        <ul class="Header-controls">
+                            
+                                
+                                <li class="item-nightmode">
+                                    <button class="Button Button--flat hasIcon" type="button">
+                                        <a href="/">
+                                        <i aria-hidden="true" class="bi bi-house-door"></i>
+                                        <span class="Button-label">首页</span>
+                                        </a>
+                                    </button>
+                                </li>
+                            
+                                
+                                <li class="item-nightmode">
+                                    <button class="Button Button--flat hasIcon" type="button">
+                                        <a target="_blank" rel="noopener" href="https://github.com/ning0818/">
+                                        <i aria-hidden="true" class="bi bi-github"></i>
+                                        <span class="Button-label">Github</span>
+                                        </a>
+                                    </button>
+                                </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </header>
+
+        </div>
+            <title>忧寒的小窝</title>
+<main class="App-content">
+    <div id="content">
+        <div class="IndexPage">
+            <div class="container">
+                <div class="sideNavContainer">
+                    <nav class="IndexPage-nav sideNav">
+                        <ul>
+                            <li class="item-nav">
+                                <div class="ButtonGroup Dropdown dropdown App-titleControl Dropdown--select itemCount12"><button class="Dropdown-toggle Button" aria-haspopup="menu" aria-label="导航栏下拉菜单开关" data-toggle="dropdown"><span class="Button-label">全部主题</span><i aria-hidden="true" class="icon fas fa-sort Button-caret"></i></button>
+                                    <ul class="Dropdown-menu dropdown-menu ">
+                                        
+                                            
+                                            <li class="item-allDiscussions active">
+                                                <a class="hasIcon" href="/" active="true">
+                                                    <i aria-hidden="true" class="bi bi-house-door"></i>
+                                                    <span class="Button-label">首页</span>
+                                                </a>
+                                            </li>
+                                        
+                                            
+                                            <li class="item-allDiscussions active">
+                                                <a class="hasIcon" href="/atom.xml" active="true">
+                                                    <i aria-hidden="true" class="bi bi-rss"></i>
+                                                    <span class="Button-label">rss</span>
+                                                </a>
+                                            </li>
+                                        
+                                            
+                                            <li class="item-allDiscussions active">
+                                                <a class="hasIcon" href="/moments/" active="true">
+                                                    <i aria-hidden="true" class="bi bi-share"></i>
+                                                    <span class="Button-label">朋友圈</span>
+                                                </a>
+                                            </li>
+                                        
+                                        <li class="Dropdown-separator"></li>
+                                        <hr>
+                                        
+                                            
+                                            <li class="item-tag1">
+                                                <a class="TagLinkButton hasIcon" href="/link/" title="友人帐" style="--color: #00b7ff;">
+                                                    <i class="bi bi-people-fill" style="--color: #00b7ff; color: rgb(0, 183, 255);"></i>
+                                                    <span class="Button-label">友人帐</span>
+                                                </a>
+                                            </li>
+                                        
+                                            
+                                            <li class="item-tag1">
+                                                <a class="TagLinkButton hasIcon" href="/atom.xml" title="rss" style="--color: #00b7ff;">
+                                                    <i class="bi bi-rss" style="--color: #00b7ff; color: rgb(0, 183, 255);"></i>
+                                                    <span class="Button-label">rss</span>
+                                                </a>
+                                            </li>
+                                        
+                                            
+                                            <li class="item-tag1">
+                                                <a class="TagLinkButton hasIcon" href="/moments/" title="朋友圈" style="--color: #00b7ff;">
+                                                    <i class="bi bi-share" style="--color: #00b7ff; color: rgb(0, 183, 255);"></i>
+                                                    <span class="Button-label">朋友圈</span>
+                                                </a>
+                                            </li>
+                                        
+                                            
+                                            <li class="item-tag1">
+                                                <a class="TagLinkButton hasIcon" href="/fcircle/" title="文坛" style="--color: #00b7ff;">
+                                                    <i class="bi bi-people" style="--color: #00b7ff; color: rgb(0, 183, 255);"></i>
+                                                    <span class="Button-label">文坛</span>
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="item-startBottomWidgetSection">
+                                <div class="AfruxWidgets-startBottom AfruxWidgets-WidgetSection"></div>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="IndexPage-results sideNavOffset">
+                        <div class="DiscussionList">
+                            <ul role="feed" class="DiscussionList-discussions">
+                                
+                                <li data-id="193" role="article" aria-setsize="-1" aria-posinset="0">
+                                    <div class="DiscussionListItem"><span class="Slidable-underneath Slidable-underneath--left Slidable-underneath--elastic disabled"><i aria-hidden="true" class="icon fas fa-check"></i></span>
+                                        <div class="DiscussionListItem-content Slidable-content read"><a class="DiscussionListItem-author" href="/about/" title="" aria-label="忧寒的小窝 发布于 3 天前" data-original-title="忧寒的小窝 发布于 3 天前"><img class="Avatar" loading="lazy" src="https://www.yuanning0818.tk/logo.png" alt=""></a><a href="/2025/03/29/My-New-Post/" class="DiscussionListItem-main">
+                                                <h2 class="DiscussionListItem-title">My New Post</h2>
+                                                <ul class="DiscussionListItem-info">
+                                                    <!--<li class="item-tags"><span class="TagsLabel"><span class="TagLabel  colored text-contrast--dark" style="--tag-bg: #ff9500;"><span class="TagLabel-text"><span class="TagLabel-name">讨论</span></span></span></span></li>-->
+                                                    <hr>
+                                                    <!--<li class="item-discussion-views"><span>20</span></li>-->
+                                                    <li class="item-excerpt">
+                                                        <div>2025-03-29</div>
+                                                    </li>
+                                                </ul>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                
+                                <li data-id="193" role="article" aria-setsize="-1" aria-posinset="0">
+                                    <div class="DiscussionListItem"><span class="Slidable-underneath Slidable-underneath--left Slidable-underneath--elastic disabled"><i aria-hidden="true" class="icon fas fa-check"></i></span>
+                                        <div class="DiscussionListItem-content Slidable-content read"><a class="DiscussionListItem-author" href="/about/" title="" aria-label="忧寒的小窝 发布于 3 天前" data-original-title="忧寒的小窝 发布于 3 天前"><img class="Avatar" loading="lazy" src="https://www.yuanning0818.tk/logo.png" alt=""></a><a href="/2025/03/29/iOS%EF%BC%881%EF%BC%89/" class="DiscussionListItem-main">
+                                                <h2 class="DiscussionListItem-title">笔记</h2>
+                                                <ul class="DiscussionListItem-info">
+                                                    <!--<li class="item-tags"><span class="TagsLabel"><span class="TagLabel  colored text-contrast--dark" style="--tag-bg: #ff9500;"><span class="TagLabel-text"><span class="TagLabel-name">讨论</span></span></span></span></li>-->
+                                                    <hr>
+                                                    <!--<li class="item-discussion-views"><span>20</span></li>-->
+                                                    <li class="item-excerpt">
+                                                        <div>2025-03-29</div>
+                                                    </li>
+                                                </ul>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                
+                                <li data-id="193" role="article" aria-setsize="-1" aria-posinset="0">
+                                    <div class="DiscussionListItem"><span class="Slidable-underneath Slidable-underneath--left Slidable-underneath--elastic disabled"><i aria-hidden="true" class="icon fas fa-check"></i></span>
+                                        <div class="DiscussionListItem-content Slidable-content read"><a class="DiscussionListItem-author" href="/about/" title="" aria-label="忧寒的小窝 发布于 3 天前" data-original-title="忧寒的小窝 发布于 3 天前"><img class="Avatar" loading="lazy" src="https://www.yuanning0818.tk/logo.png" alt=""></a><a href="/2025/03/29/hello-world/" class="DiscussionListItem-main">
+                                                <h2 class="DiscussionListItem-title">Hello World</h2>
+                                                <ul class="DiscussionListItem-info">
+                                                    <!--<li class="item-tags"><span class="TagsLabel"><span class="TagLabel  colored text-contrast--dark" style="--tag-bg: #ff9500;"><span class="TagLabel-text"><span class="TagLabel-name">讨论</span></span></span></span></li>-->
+                                                    <hr>
+                                                    <!--<li class="item-discussion-views"><span>20</span></li>-->
+                                                    <li class="item-excerpt">
+                                                        <div>2025-03-29</div>
+                                                    </li>
+                                                </ul>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="AfruxWidgets-sideNavAlt AfruxWidgets-WidgetSection">
+    <div class="AfruxWidgets-Widget welcomebox-widget">
+        <div class="AfruxWidgets-Widget-content">
+            <div class="containerwb">
+                <div class="backgrwb">
+                    <div><a href="/">
+                            <div class="avatarwb">
+                                <div class="AvatarEditor Dropdown">
+                                    <!--侧栏logo-->
+                                    <img loading="eager" class="Avatar" src="https://www.yuanning0818.tk/logo.png" alt="">
+                                    <!--侧栏logo end-->
+                                    <ul class="Dropdown-menu Menu">
+                                        <li class="item-upload"><button class="hasIcon" type="button"><i aria-hidden="true" class="icon fas fa-upload Button-icon"></i><span class="Button-label">上传</span></button></li>
+                                        <li class="item-remove"><button class="hasIcon" type="button"><i aria-hidden="true" class="icon fas fa-times Button-icon"></i><span class="Button-label">移除</span></button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a></div>
+                    <div class="contentwb">
+                        <div class="textinfo"><strong><span class="username">忧寒的小窝</span></strong></div>
+                        <div class="cont">
+                            <div class="circletop">
+                                
+                                    
+                                    <a href="/about/" title="关于">
+                                        <i class="bi bi-file-earmark-person-fill"></i>
+                                    </a>
+                                
+                                    
+                                    <a href="/about/" title="Github">
+                                        <i class="bi bi-github"></i>
+                                    </a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="iconbadge"></div>
+                </div>
+            </div>
+        </div>
     </div>
     
-    <div class="video-media">
-      <video playsinline="" autoplay="" loop="" muted="" data-autoplay="" poster="/images/ocean/ocean.png"
-        x5-video-player-type="h5">
-        <source src="/images/ocean/ocean.mp4" type="video/mp4">
-        <source src="/images/ocean/ocean.ogv" type="video/ogg">
-        <source src="/images/ocean/ocean.webm" type="video/webm">
-        <p>Your user agent does not support the HTML5 Video element.</p>
-      </video>
-      <div class="video-overlay"></div>
-    </div>
-    <div class="video-inner text-center text-white">
-      <h1><a href="/">忧寒的小窝</a></h1>
-      <p>记录技术与生活</p>
-      <div><img src="/images/hexo-inverted.svg" class="brand" alt="忧寒的小窝"></div>
-    </div>
-    <div class="video-learn-more">
-      <a class="anchor" href="#landingpage"><i class="fe fe-mouse"></i></a>
-    </div>
-  </div>
-</section>
-<div id="landingpage">
-  <section class="outer">
-  <article class="articles">
-    
-    <h1 class="page-type-title"></h1>
-    
-    
-    <article id="post-My-New-Post" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-      
-  
-  <h2 class="article-title" itemprop="name">
-    <a href="/2025/03/29/My-New-Post/">My New Post</a>
-  </h2>
-  
-  
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="/2025/03/29/My-New-Post/" class="article-date">
-  <time datetime="2025-03-29T08:42:43.000Z" itemprop="datePublished">2025-03-29</time>
-</a>
-      
-    </div>
-    
-
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-      
         
-      
-      
+        <div class="AfruxWidgets-Widget Afrux-ForumStatsWidgetWidget">
+            <div class="AfruxWidgets-Widget-title">
+                <span class="AfruxWidgets-Widget-title-icon">
+                    <i aria-hidden="true" class="bi bi-bell-fill"></i>
+                </span>
+                <span class="AfruxWidgets-Widget-title-label">公告</span>
+                <div class="AfruxWidgets-Widget-title-desc">
+                </div>
+            </div>
+            <div class="AfruxWidgets-Widget-content">
+                <p>这是一个公告</p>
+            </div>
+        </div>
+    
+    <div class="AfruxWidgets-Widget Afrux-ForumStatsWidgetWidget">
+        <div class="AfruxWidgets-Widget-title">
+            <span class="AfruxWidgets-Widget-title-icon">
+                <i aria-hidden="true" class="bi bi-alexa"></i>
+            </span>
+            <span class="AfruxWidgets-Widget-title-label">统计</span>
+            <div class="AfruxWidgets-Widget-title-desc">
+            </div>
+        </div>
+        <div class="AfruxWidgets-Widget-content">
+            <div class="Afrux-ForumStatsWidget-grid">
+                    <p>访客数<span id="busuanzi_value_site_uv"></span>人</p>
+                    <p>访问量<span id="busuanzi_value_site_pv"></span>次</p>
+        </div>
+    </div>
+</div>
+<div class="AfruxWidgets-bottomWidgetSection AfruxWidgets-WidgetSection"></div>
+
+                </div>
+            </div>
+        </div>
+
+    <div id="flarum-loading" style="display: none;">
+        正在加载…
+    </div>
+
+    <noscript>
+        <div class="Alert">
+            <div class="container">
+                请使用更现代的浏览器并启用 JavaScript 以获得最佳浏览体验。
+            </div>
+        </div>
+    </noscript>
+
+    <div class="App-composer">
+        <div class="container">
+            <div id="composer">
+                <div class="Composer " style="display: none; bottom: -300px; height: 300px;">
+                    <div class="Composer-handle" style="cursor: row-resize;"></div>
+                    <ul class="Composer-controls">
+                        <li class="item-minimize App-backControl"><button class="Button Button--icon Button--link hasIcon" type="button" aria-label="最小化" itemclassname="App-backControl"><i aria-hidden="true" class="icon fas fa-minus minimize Button-icon"></i><span class="Button-label"></span></button></li>
+                        <li class="item-fullScreen"><button class="Button Button--icon Button--link hasIcon" type="button" aria-label="全屏"><i aria-hidden="true" class="icon fas fa-expand Button-icon"></i><span class="Button-label"></span></button></li>
+                        <li class="item-close"><button class="Button Button--icon Button--link hasIcon" type="button" aria-label="关闭"><i aria-hidden="true" class="icon fas fa-times Button-icon"></i><span class="Button-label"></span></button></li>
+                    </ul>
+                    <div class="Composer-content"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+</div>
+
+    <div class="posts-ls cm9 c9 p9 m12">
+    <div class="btns" style="margin: auto;width: min-content;">
         
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2025/03/29/My-New-Post/" data-id="cm8tys3py0000k6w17gg23uoa" class="article-share-link">
-        分享
-      </a>
-      
-    </footer>
-
-  </div>
-
-  
-
-  
-
-</article>
-    
-    <article id="post-iOS（1）" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-      
-  
-  <h2 class="article-title" itemprop="name">
-    <a href="/2025/03/29/iOS%EF%BC%881%EF%BC%89/">笔记</a>
-  </h2>
-  
-  
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="/2025/03/29/iOS%EF%BC%881%EF%BC%89/" class="article-date">
-  <time datetime="2025-03-29T06:45:41.766Z" itemprop="datePublished">2025-03-29</time>
-</a>
-      
-    </div>
-    
-
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-      
+        <div class="btn"> 1 </div>
         
-      
-      
-        <h1 id="ios开发-（天气pro-max解析）"><a href="#ios开发-（天气pro-max解析）" class="headerlink" title="ios开发  （天气pro max解析）"></a>ios开发  （天气pro max解析）</h1><h2 id="1-SceneDelegate-swift文件"><a href="#1-SceneDelegate-swift文件" class="headerlink" title="1.SceneDelegate.swift文件"></a>1.SceneDelegate.swift文件</h2><h4 id="在SceneDelegate-swift文件中，将app点开时，初始视图封装在导航栈NavigationController中"><a href="#在SceneDelegate-swift文件中，将app点开时，初始视图封装在导航栈NavigationController中" class="headerlink" title="在SceneDelegate.swift文件中，将app点开时，初始视图封装在导航栈NavigationController中"></a>在SceneDelegate.swift文件中，将app点开时，初始视图封装在导航栈NavigationController中</h4><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> window: <span class="type">UIWindow</span>?</span><br><span class="line"></span><br><span class="line">  <span class="keyword">func</span> <span class="title function_">scene</span>(<span class="keyword">_</span> <span class="params">scene</span>: <span class="type">UIScene</span>, <span class="params">willConnectTo</span> <span class="params">session</span>: <span class="type">UISceneSession</span>, <span class="params">options</span> <span class="params">connectionOptions</span>: <span class="type">UIScene</span>.<span class="type">ConnectionOptions</span>) &#123;</span><br><span class="line">      <span class="keyword">guard</span> <span class="keyword">let</span> windowScene <span class="operator">=</span> (scene <span class="keyword">as?</span> <span class="type">UIWindowScene</span>) <span class="keyword">else</span> &#123; <span class="keyword">return</span> &#125;</span><br><span class="line">      </span><br><span class="line">      <span class="comment">// 创建 UIWindow</span></span><br><span class="line">      window <span class="operator">=</span> <span class="type">UIWindow</span>(windowScene: windowScene)</span><br><span class="line">      </span><br><span class="line">      <span class="comment">// 创建 ViewController</span></span><br><span class="line">      <span class="keyword">let</span> viewController <span class="operator">=</span> <span class="type">ViewController</span>()</span><br><span class="line">      </span><br><span class="line">      <span class="comment">// 创建 UINavigationController，并将 ViewController 设置为根视图控制器</span></span><br><span class="line">      <span class="keyword">let</span> navigationController <span class="operator">=</span> <span class="type">UINavigationController</span>(rootViewController: viewController)</span><br><span class="line">      </span><br><span class="line">      <span class="comment">// 将导航控制器设置为 window 的根视图控制器</span></span><br><span class="line">      window<span class="operator">?</span>.rootViewController <span class="operator">=</span> navigationController</span><br><span class="line">      </span><br><span class="line">      <span class="comment">// 显示 window</span></span><br><span class="line">      window<span class="operator">?</span>.makeKeyAndVisible()</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>调用下面一行</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> navigationController <span class="operator">=</span> <span class="type">UINavigationController</span>(rootViewController: viewController)</span><br></pre></td></tr></table></figure>
-<p>用 rootViewController 设置根视图为 “viewController”视图，（根视图就是点开app时会进入的第一个视图），而调用UINavigationController会将cityView压入一个导航栈中，这样就可以在屏幕上方显示或隐藏导航栏，也可以设置导航栏标题</p>
-<h2 id="2-ViewController-swift文件"><a href="#2-ViewController-swift文件" class="headerlink" title="2.ViewController.swift文件"></a>2.ViewController.swift文件</h2><p>在ViewController.swift文件中调用,在视图即将打开时进行初始化</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">override</span> <span class="keyword">func</span> <span class="title function_">viewDidLoad</span>() &#123;</span><br><span class="line">     <span class="keyword">super</span>.viewDidLoad()</span><br><span class="line">     <span class="keyword">self</span>.navigationItem.title <span class="operator">=</span> <span class="string">&quot;天气查看&quot;</span></span><br><span class="line">     addViewandnavigation()</span><br><span class="line"> &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>下一行函数</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">override</span> <span class="keyword">func</span> <span class="title function_">viewDidLoad</span>() &#123;</span><br><span class="line">       <span class="keyword">super</span>.viewDidLoad()</span><br><span class="line">   &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>viewDidLoad()会在视图打开之前“自动调用”，不需要控制。  self.navigationItem.title &#x3D; “天气查看”，一行中设置了导航栏标题</p>
-
-      
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2025/03/29/iOS%EF%BC%881%EF%BC%89/" data-id="cm8tys3q00002k6w1gvdf69aq" class="article-share-link">
-        分享
-      </a>
-      
-    </footer>
-
-  </div>
-
-  
-
-  
-
-</article>
-    
-    <article id="post-hello-world" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-      
-  
-  <h2 class="article-title" itemprop="name">
-    <a href="/2025/03/29/hello-world/">Hello World</a>
-  </h2>
-  
-  
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="/2025/03/29/hello-world/" class="article-date">
-  <time datetime="2025-03-29T06:10:48.723Z" itemprop="datePublished">2025-03-29</time>
-</a>
-      
     </div>
-    
-
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-        
-      
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2025/03/29/hello-world/" data-id="cm8tys3pz0001k6w1hz03cpzu" class="article-share-link">
-        分享
-      </a>
-      
-    </footer>
-
-  </div>
-
-  
-
-  
-
-</article>
-    
-  </article>
-  
-
-  
-</section>
-</div>
-    <footer class="footer">
-  <div class="outer">
-    <ul class="list-inline">
-      <li>忧寒的小窝 &copy; 2025</li>
-      
-        <li>
-          
-            <a href="https://beian.miit.gov.cn/" target="_blank"></a>
-            
-        </li>
-      
-      <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
-      <li>theme  <a target="_blank" rel="noopener" href="https://github.com/zhwangart/hexo-theme-ocean">Ocean</a></li>
-    </ul>
-    <p><ul class="list-inline">
-  
-  <li><i class="fe fe-bar-chart tooltip" data-tooltip="PV"></i> <span id="busuanzi_value_site_pv"></span></li>
-  
-  <li><i class="fe fe-smile-alt tooltip" data-tooltip="UV"></i> <span id="busuanzi_value_site_uv"></span></li>
-  
-</ul></p>
-  </div>
-</footer>
-  </main>
-  <aside class="sidebar">
-    <button class="navbar-toggle"></button>
-<nav class="navbar">
-  
-  <div class="logo">
-    <a href="/"><img src="/images/hexo.svg" alt="忧寒的小窝"></a>
-  </div>
-  
-  <ul class="nav nav-main">
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/">Home</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/archives">Archives</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/gallery">Gallery</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/about">About</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link nav-item-search" title="搜索">
-        <i class="fe fe-search"></i>
-        搜索
-      </a>
-    </li>
-  </ul>
-</nav>
-<nav class="navbar navbar-bottom">
-  <ul class="nav">
-    <li class="nav-item">
-      <div class="totop" id="totop">
-  <i class="fe fe-rocket"></i>
-</div>
-    </li>
-    <li class="nav-item">
-      
-      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
-        <i class="fe fe-feed"></i>
-      </a>
-      
-    </li>
-  </ul>
-</nav>
-<div class="search-form-wrap">
-  <div class="local-search local-search-plugin">
-  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
-  <div id="local-search-result" class="local-search-result"></div>
-</div>
-</div>
-  </aside>
-  
-<script src="/js/jquery-2.0.3.min.js"></script>
-
-
-<script src="/js/jquery.justifiedGallery.min.js"></script>
-
-
-<script src="/js/lazyload.min.js"></script>
-
-
-<script src="/js/busuanzi-2.3.pure.min.js"></script>
-
-
-
-<script src="/fancybox/jquery.fancybox.min.js"></script>
 
 
 
 
 
 
-<script src="/js/ocean.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
+            <hr>
+<div>
+    
+<!--这里是靠左的底栏-->
+<a href="https://icp.gov.moe/?keyword=20221982" target="_blank">萌ICP备20221982号</a>
 
-</html>
+</div>
+<div style="text-align: right;">
+
+<!--这里是靠右的底栏-->
+<p>Theme is <a target="_blank" rel="noopener" href="https://github.com/ning0818/hexo-theme-ning">Ning</a> By <a target="_blank" rel="noopener" href="https://www.yuanning0818.tk">Ning0818</a></p>
+<p>Powerd By <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a></p>
+
+
+</div>
+        </div>
+    </body>
+    </html> 
