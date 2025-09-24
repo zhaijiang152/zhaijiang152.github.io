@@ -1,0 +1,192 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>4.如何配置python才能在Pycharm中使用opencv和numpy | zhaijiang的小窝</title><meta name="author" content="zhaijiang152"><meta name="copyright" content="zhaijiang152"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="通过Homebrew下载好python后,用终端运行下面代码12345678910111213# 安装 Python 3.12brew install python@3.12# 创建虚拟环境python3.12 -m venv opencv_env# 激活虚拟环境source opencv_env&#x2F;bin&#x2F;activate# 安装 opencv 和 numpypip install --upgra">
+<meta property="og:type" content="article">
+<meta property="og:title" content="4.如何配置python才能在Pycharm中使用opencv和numpy">
+<meta property="og:url" content="https://github.com/zhaijiang152/2025/09/24/4-%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AEpython%E6%89%8D%E8%83%BD%E5%9C%A8Pycharm%E4%B8%AD%E4%BD%BF%E7%94%A8opencv%E5%92%8Cnumpy/index.html">
+<meta property="og:site_name" content="zhaijiang的小窝">
+<meta property="og:description" content="通过Homebrew下载好python后,用终端运行下面代码12345678910111213# 安装 Python 3.12brew install python@3.12# 创建虚拟环境python3.12 -m venv opencv_env# 激活虚拟环境source opencv_env&#x2F;bin&#x2F;activate# 安装 opencv 和 numpypip install --upgra">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://github.com/zhaijiang152/img/%E5%A4%B4%E5%83%8F.png">
+<meta property="article:published_time" content="2025-09-24T13:49:30.336Z">
+<meta property="article:modified_time" content="2025-09-24T13:50:55.130Z">
+<meta property="article:author" content="zhaijiang152">
+<meta property="article:tag" content="技术, 编程, 博客, 学习">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://github.com/zhaijiang152/img/%E5%A4%B4%E5%83%8F.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "4.如何配置python才能在Pycharm中使用opencv和numpy",
+  "url": "https://github.com/zhaijiang152/2025/09/24/4-%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AEpython%E6%89%8D%E8%83%BD%E5%9C%A8Pycharm%E4%B8%AD%E4%BD%BF%E7%94%A8opencv%E5%92%8Cnumpy/",
+  "image": "https://github.com/zhaijiang152/img/%E5%A4%B4%E5%83%8F.png",
+  "datePublished": "2025-09-24T13:49:30.336Z",
+  "dateModified": "2025-09-24T13:50:55.130Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "zhaijiang152",
+      "url": "https://github.com/zhaijiang152"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://github.com/zhaijiang152/2025/09/24/4-%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AEpython%E6%89%8D%E8%83%BD%E5%9C%A8Pycharm%E4%B8%AD%E4%BD%BF%E7%94%A8opencv%E5%92%8Cnumpy/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '4.如何配置python才能在Pycharm中使用opencv和numpy',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 8.0.0"></head><body><div id="web_bg" style="background-image: url(/img/blackmythwukong.png);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/%E5%A4%B4%E5%83%8F.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background: transparent;"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">zhaijiang的小窝</span></a><a class="nav-page-title" href="/"><span class="site-name">4.如何配置python才能在Pycharm中使用opencv和numpy</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">4.如何配置python才能在Pycharm中使用opencv和numpy</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-09-24T13:49:30.336Z" title="发表于 2025-09-24 21:49:30">2025-09-24</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-09-24T13:50:55.130Z" title="更新于 2025-09-24 21:50:55">2025-09-24</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="通过Homebrew下载好python后-用终端运行下面代码"><a href="#通过Homebrew下载好python后-用终端运行下面代码" class="headerlink" title="通过Homebrew下载好python后,用终端运行下面代码"></a>通过Homebrew下载好python后,用终端运行下面代码</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># 安装 Python 3.12</span><br><span class="line">brew install python@3.12</span><br><span class="line"></span><br><span class="line"># 创建虚拟环境</span><br><span class="line">python3.12 -m venv opencv_env</span><br><span class="line"></span><br><span class="line"># 激活虚拟环境</span><br><span class="line">source opencv_env/bin/activate</span><br><span class="line"></span><br><span class="line"># 安装 opencv 和 numpy</span><br><span class="line">pip install --upgrade pip</span><br><span class="line">pip install opencv-python numpy</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p>已经在 <strong>Python 3.12 的虚拟环境 <code>opencv_env</code></strong> 里成功安装了 <code>opencv-python</code> 和 <code>numpy</code>。</p>
+<p>你在终端里 <code>import cv2</code> 应该已经没问题了。现在 PyCharm 用不了，是因为 <strong>PyCharm 没有切换到你刚刚的虚拟环境解释器</strong>。</p>
+<hr>
+<h3 id="🔧-在-PyCharm-配置正确的虚拟环境"><a href="#🔧-在-PyCharm-配置正确的虚拟环境" class="headerlink" title="🔧 在 PyCharm 配置正确的虚拟环境"></a>🔧 在 PyCharm 配置正确的虚拟环境</h3><ol>
+<li><p>打开 PyCharm，进入你的项目。</p>
+</li>
+<li><p>点击菜单栏 <strong>PyCharm → Settings（偏好设置）</strong>。</p>
+</li>
+<li><p>左边找到：<strong>Project: 你的项目名 → Python Interpreter</strong>解释器。</p>
+</li>
+<li><p>右上角点 <strong>⚙️ → Add Interpreter</strong>（添加解释器）。</p>
+</li>
+<li><p>选择 <strong>Add Local Interpreter → Existing environment</strong>（一定要点<strong>选择现有</strong>，当时浪费好多时间）。</p>
+</li>
+<li><p>浏览选择你虚拟环境的 Python 解释器路径：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/Users/youhan152/opencv_env/bin/python3.12</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>点击 OK，等待 PyCharm 重新加载。</p>
+</li>
+</ol>
+<hr>
+<h3 id="✅-检查方法"><a href="#✅-检查方法" class="headerlink" title="✅ 检查方法"></a>✅ 检查方法</h3><p>在 PyCharm 的 Python Console 或你的项目代码里输入：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="built_in">print</span>(cv2.__version__)</span><br></pre></td></tr></table></figure>
+
+<p>应该能正常输出 OpenCV 的版本号，比如 <code>4.12.0</code>。</p>
+<p>这样就能正确在py文件里面正确调用cv2和numpy了</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://github.com/zhaijiang152">zhaijiang152</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://github.com/zhaijiang152/2025/09/24/4-%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AEpython%E6%89%8D%E8%83%BD%E5%9C%A8Pycharm%E4%B8%AD%E4%BD%BF%E7%94%A8opencv%E5%92%8Cnumpy/">https://github.com/zhaijiang152/2025/09/24/4-如何配置python才能在Pycharm中使用opencv和numpy/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://github.com/zhaijiang152" target="_blank">zhaijiang的小窝</a>！</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="/img/%E5%A4%B4%E5%83%8F.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.png" target="_blank"><img class="post-qr-code-img" src="/img/wechat.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li></ul></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/2025/09/23/3-Uikit%E7%9A%84MVVM%E6%A8%A1%E5%BC%8F/" title="3.Uikit的MVVM模式"><div class="cover" style="background: transparent"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">3.Uikit的MVVM模式</div></div><div class="info-2"><div class="info-item-1">我们来详细讲解 在 UIKit 中实现 MVVM 的设计模式。这与 SwiftUI 中的 MVVM 核心思想一致，但由于 UIKit 是命令式框架，实现方式上有所不同。  1. 核心思想回顾MVVM 的核心永远是分离关注点：  Model: 数据和业务逻辑。 View: UI 呈现（UIView, UIViewController）。 ViewModel: 将 Model 转换为 View 可显示的状态，并处理 View 的交互逻辑。  在 UIKit 中，UIViewController及其管理的 UIView共同被视为 “V” (View层)。  2. 各组件职责（UIKit 版）   组件 职责 具体任务    Model 数据与业务规则 - 数据模型 (Struct&#x2F;Class) - 网络请求 (NetworkService) - 数据库操作 (PersistenceService)   View 显示UI &amp; 用户交互 - UIViewController 和 UIView - 负责创建和布局UI组件 - 通过 委托、IBAction、Target-A...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/%E5%A4%B4%E5%83%8F.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">zhaijiang152</div><div class="author-info-description">一个分享编程知识和个人随笔的博客。</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" href="https://github.com/zhaijiang152"><i class="fab fa-github"></i><span>看看我的GitHub</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/zhaijiang152" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:qq1281167818@163.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">这是我用Hexo搭的博客,记录一些笔记</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%80%9A%E8%BF%87Homebrew%E4%B8%8B%E8%BD%BD%E5%A5%BDpython%E5%90%8E-%E7%94%A8%E7%BB%88%E7%AB%AF%E8%BF%90%E8%A1%8C%E4%B8%8B%E9%9D%A2%E4%BB%A3%E7%A0%81"><span class="toc-number">1.</span> <span class="toc-text">通过Homebrew下载好python后,用终端运行下面代码</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%94%A7-%E5%9C%A8-PyCharm-%E9%85%8D%E7%BD%AE%E6%AD%A3%E7%A1%AE%E7%9A%84%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83"><span class="toc-number">1.0.1.</span> <span class="toc-text">🔧 在 PyCharm 配置正确的虚拟环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%9C%85-%E6%A3%80%E6%9F%A5%E6%96%B9%E6%B3%95"><span class="toc-number">1.0.2.</span> <span class="toc-text">✅ 检查方法</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/09/24/4-%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AEpython%E6%89%8D%E8%83%BD%E5%9C%A8Pycharm%E4%B8%AD%E4%BD%BF%E7%94%A8opencv%E5%92%8Cnumpy/" title="4.如何配置python才能在Pycharm中使用opencv和numpy"><div style="background: transparent"></div></a><div class="content"><a class="title" href="/2025/09/24/4-%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AEpython%E6%89%8D%E8%83%BD%E5%9C%A8Pycharm%E4%B8%AD%E4%BD%BF%E7%94%A8opencv%E5%92%8Cnumpy/" title="4.如何配置python才能在Pycharm中使用opencv和numpy">4.如何配置python才能在Pycharm中使用opencv和numpy</a><time datetime="2025-09-24T13:49:30.336Z" title="发表于 2025-09-24 21:49:30">2025-09-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/09/23/3-Uikit%E7%9A%84MVVM%E6%A8%A1%E5%BC%8F/" title="3.Uikit的MVVM模式"><div style="background: transparent"></div></a><div class="content"><a class="title" href="/2025/09/23/3-Uikit%E7%9A%84MVVM%E6%A8%A1%E5%BC%8F/" title="3.Uikit的MVVM模式">3.Uikit的MVVM模式</a><time datetime="2025-09-23T14:34:33.246Z" title="发表于 2025-09-23 22:34:33">2025-09-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/09/23/2-Markdown%E4%B8%ADFront-matter%E4%B8%BB%E8%A6%81%E4%BD%9C%E7%94%A8/" title="2.Markdown中Front-matter主要作用"><div style="background: transparent"></div></a><div class="content"><a class="title" href="/2025/09/23/2-Markdown%E4%B8%ADFront-matter%E4%B8%BB%E8%A6%81%E4%BD%9C%E7%94%A8/" title="2.Markdown中Front-matter主要作用">2.Markdown中Front-matter主要作用</a><time datetime="2025-09-23T11:32:59.581Z" title="发表于 2025-09-23 19:32:59">2025-09-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/09/23/1-hello-world/" title="1.Hello World"><img src="/Hexoblog_imagin/og-image-wide.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="1.Hello World"/></a><div class="content"><a class="title" href="/2025/09/23/1-hello-world/" title="1.Hello World">1.Hello World</a><time datetime="2025-09-23T07:25:09.677Z" title="发表于 2025-09-23 15:25:09">2025-09-23</time></div></div></div></div></div></div></main><footer id="footer" style="background: transparent;"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 By zhaijiang152</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.0.0</a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.0</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
