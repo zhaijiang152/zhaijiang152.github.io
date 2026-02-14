@@ -4,6 +4,101 @@
   
     
     <entry>
+      <title>8.最长递增子序列</title>
+      <link href="/2026/02/14/22-%E6%9C%80%E9%95%BF%E9%80%92%E5%A2%9E%E5%AD%90%E5%BA%8F%E5%88%97/"/>
+      <url>/2026/02/14/22-%E6%9C%80%E9%95%BF%E9%80%92%E5%A2%9E%E5%AD%90%E5%BA%8F%E5%88%97/</url>
+      
+        <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法面试题 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>7.反转二叉树</title>
+      <link href="/2026/02/14/21-%E7%BF%BB%E8%BD%AC%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
+      <url>/2026/02/14/21-%E7%BF%BB%E8%BD%AC%E4%BA%8C%E5%8F%89%E6%A0%91/</url>
+      
+        <content type="html"><![CDATA[<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">TreeNode* <span class="title">invertTree</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="literal">nullptr</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">nullptr</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        TreeNode* left = <span class="built_in">invertTree</span>(root-&gt;left);</span><br><span class="line">        TreeNode* right = <span class="built_in">invertTree</span>(root-&gt;right);</span><br><span class="line">        root-&gt;left = right;</span><br><span class="line">        root-&gt;right = left;</span><br><span class="line">        <span class="keyword">return</span> root;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法面试题 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>6.岛屿数量</title>
+      <link href="/2026/02/14/20-%E5%B2%9B%E5%B1%BF%E6%95%B0%E9%87%8F/"/>
+      <url>/2026/02/14/20-%E5%B2%9B%E5%B1%BF%E6%95%B0%E9%87%8F/</url>
+      
+        <content type="html"><![CDATA[<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">numIslands</span><span class="params">(vector&lt;vector&lt;<span class="type">char</span>&gt;&gt;&amp; grid)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> m = grid.<span class="built_in">size</span>(), n = grid[<span class="number">0</span>].<span class="built_in">size</span>();</span><br><span class="line">        <span class="keyword">auto</span> dfs = [&amp;](<span class="keyword">this</span> <span class="keyword">auto</span>&amp;&amp; dfs, <span class="type">int</span> i, <span class="type">int</span> j) -&gt; <span class="type">void</span> &#123;</span><br><span class="line">            <span class="comment">// 出界，或者不是 &#x27;1&#x27;，就不再往下递归</span></span><br><span class="line">            <span class="keyword">if</span> (i &lt; <span class="number">0</span> || i &gt;= m || j &lt; <span class="number">0</span> || j &gt;= n || grid[i][j] != <span class="string">&#x27;1&#x27;</span>) &#123;</span><br><span class="line">                <span class="keyword">return</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            grid[i][j] = <span class="string">&#x27;2&#x27;</span>; <span class="comment">// 插旗！避免来回横跳无限递归</span></span><br><span class="line">            <span class="built_in">dfs</span>(i, j - <span class="number">1</span>); <span class="comment">// 往左走</span></span><br><span class="line">            <span class="built_in">dfs</span>(i, j + <span class="number">1</span>); <span class="comment">// 往右走</span></span><br><span class="line">            <span class="built_in">dfs</span>(i - <span class="number">1</span>, j); <span class="comment">// 往上走</span></span><br><span class="line">            <span class="built_in">dfs</span>(i + <span class="number">1</span>, j); <span class="comment">// 往下走</span></span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">        <span class="type">int</span> ans = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; m; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; n; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (grid[i][j] == <span class="string">&#x27;1&#x27;</span>) &#123; <span class="comment">// 找到了一个新的岛</span></span><br><span class="line">                    <span class="built_in">dfs</span>(i, j); <span class="comment">// 把这个岛插满旗子，这样后面遍历到的 &#x27;1&#x27; 一定是新的岛</span></span><br><span class="line">                    ans++;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法面试题 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>5.最大交替子序列和</title>
+      <link href="/2026/02/14/19-%E6%9C%80%E5%A4%A7%E4%BA%A4%E6%9B%BF%E5%AD%90%E5%BA%8F%E5%88%97%E5%92%8C/"/>
+      <url>/2026/02/14/19-%E6%9C%80%E5%A4%A7%E4%BA%A4%E6%9B%BF%E5%AD%90%E5%BA%8F%E5%88%97%E5%92%8C/</url>
+      
+        <content type="html"><![CDATA[<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">long</span> <span class="type">long</span> <span class="title">maxAlternatingSum</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        <span class="type">long</span> <span class="type">long</span> even = nums[<span class="number">0</span>], odd = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt; nums.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">            even = <span class="built_in">max</span>(even, odd + nums[i]);</span><br><span class="line">            odd = <span class="built_in">max</span>(odd, even - nums[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> even;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法面试题 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>4.三数之和</title>
+      <link href="/2026/02/14/18-%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C/"/>
+      <url>/2026/02/14/18-%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C/</url>
+      
+        <content type="html"><![CDATA[<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; <span class="built_in">threeSum</span>(vector&lt;<span class="type">int</span>&gt;&amp; nums) &#123;</span><br><span class="line">        ranges::<span class="built_in">sort</span>(nums);</span><br><span class="line">        vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; ans;</span><br><span class="line">        <span class="type">int</span> n = nums.<span class="built_in">size</span>();</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n - <span class="number">2</span>; i++) &#123;</span><br><span class="line">            <span class="type">int</span> x = nums[i];</span><br><span class="line">            <span class="keyword">if</span> (i &amp;&amp; x == nums[i - <span class="number">1</span>]) <span class="keyword">continue</span>; <span class="comment">// 跳过重复数字</span></span><br><span class="line">            <span class="keyword">if</span> (x + nums[i + <span class="number">1</span>] + nums[i + <span class="number">2</span>] &gt; <span class="number">0</span>) <span class="keyword">break</span>; <span class="comment">// 优化一</span></span><br><span class="line">            <span class="keyword">if</span> (x + nums[n - <span class="number">2</span>] + nums[n - <span class="number">1</span>] &lt; <span class="number">0</span>) <span class="keyword">continue</span>; <span class="comment">// 优化二</span></span><br><span class="line">            <span class="type">int</span> j = i + <span class="number">1</span>, k = n - <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">while</span> (j &lt; k) &#123;</span><br><span class="line">                <span class="type">int</span> s = x + nums[j] + nums[k];</span><br><span class="line">                <span class="keyword">if</span> (s &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                    k--;</span><br><span class="line">                &#125; <span class="keyword">else</span> <span class="keyword">if</span> (s &lt; <span class="number">0</span>) &#123;</span><br><span class="line">                    j++;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123; <span class="comment">// 三数之和为 0</span></span><br><span class="line">                    ans.<span class="built_in">push_back</span>(&#123;x, nums[j], nums[k]&#125;);</span><br><span class="line">                    <span class="keyword">for</span> (j++; j &lt; k &amp;&amp; nums[j] == nums[j - <span class="number">1</span>]; j++); <span class="comment">// 跳过重复数字</span></span><br><span class="line">                    <span class="keyword">for</span> (k--; k &gt; j &amp;&amp; nums[k] == nums[k + <span class="number">1</span>]; k--); <span class="comment">// 跳过重复数字</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法面试题 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>3.二叉树的右视图</title>
       <link href="/2026/02/14/17-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%8F%B3%E8%A7%86%E5%9B%BE/"/>
       <url>/2026/02/14/17-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%8F%B3%E8%A7%86%E5%9B%BE/</url>
