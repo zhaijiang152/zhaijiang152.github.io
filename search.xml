@@ -4,7 +4,26 @@
   
     
     <entry>
-      <title>手撕快排</title>
+      <title>2.无重复字符的最长子串</title>
+      <link href="/2026/02/14/16-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2/"/>
+      <url>/2026/02/14/16-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2/</url>
+      
+        <content type="html"><![CDATA[<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">lengthOfLongestSubstring</span><span class="params">(string s)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> cnt=s.<span class="built_in">size</span>(),sum=<span class="number">0</span>;</span><br><span class="line">        map&lt;<span class="type">char</span>,<span class="type">int</span>&gt;mp;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;cnt;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(!mp.<span class="built_in">count</span>(s[i]))&#123;</span><br><span class="line">                sum++;</span><br><span class="line">                mp[s[i]]=<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(sum==<span class="number">1</span>)<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span>(sum==<span class="number">2</span>)<span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">if</span>(sum==cnt)<span class="keyword">return</span> sum;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=sum;i&gt;=<span class="number">3</span>;i--)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>;j&lt;=cnt-i;j++)&#123;<span class="comment">//j是当前初始查找位置</span></span><br><span class="line">            map&lt;<span class="type">char</span>,<span class="type">int</span>&gt;mp2;</span><br><span class="line">            <span class="type">int</span> y=j,sum2=<span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> z=<span class="number">1</span>;z&lt;=i;z++)&#123;</span><br><span class="line">                 <span class="keyword">if</span>(!mp<span class="number">2.</span><span class="built_in">count</span>(s[y]))&#123;</span><br><span class="line">                sum2++;</span><br><span class="line">                mp2[s[y]]=<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            y++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(sum2==i)<span class="keyword">return</span> sum2;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;   </span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法面试题 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>1.手撕快排</title>
       <link href="/2026/02/14/15-%E6%89%8B%E6%92%95%E5%BF%AB%E6%8E%92/"/>
       <url>/2026/02/14/15-%E6%89%8B%E6%92%95%E5%BF%AB%E6%8E%92/</url>
       
