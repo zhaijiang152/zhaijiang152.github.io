@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>3.二叉树的右视图</title>
+      <link href="/2026/02/14/17-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%8F%B3%E8%A7%86%E5%9B%BE/"/>
+      <url>/2026/02/14/17-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%8F%B3%E8%A7%86%E5%9B%BE/</url>
+      
+        <content type="html"><![CDATA[<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">rightSideView</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt;result;</span><br><span class="line">        <span class="keyword">if</span>(!root)<span class="keyword">return</span> result;</span><br><span class="line">        </span><br><span class="line">        queue&lt;TreeNode*&gt;q;</span><br><span class="line">        q.<span class="built_in">push</span>(root);</span><br><span class="line">        <span class="keyword">while</span>(!q.<span class="built_in">empty</span>())&#123;</span><br><span class="line">            <span class="type">int</span> size=q.<span class="built_in">size</span>();</span><br><span class="line">            TreeNode*lastnode=<span class="literal">nullptr</span>;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;size;++i)&#123;</span><br><span class="line">            TreeNode*node=q.<span class="built_in">front</span>();</span><br><span class="line">            q.<span class="built_in">pop</span>();</span><br><span class="line">            lastnode=node;</span><br><span class="line">            <span class="keyword">if</span>(node-&gt;left)q.<span class="built_in">push</span>(node-&gt;left);</span><br><span class="line">            <span class="keyword">if</span>(node-&gt;right)q.<span class="built_in">push</span>(node-&gt;right);</span><br><span class="line">        &#125;</span><br><span class="line">        result.<span class="built_in">push_back</span>(lastnode-&gt;val);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法面试题 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>2.无重复字符的最长子串</title>
       <link href="/2026/02/14/16-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2/"/>
       <url>/2026/02/14/16-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2/</url>
